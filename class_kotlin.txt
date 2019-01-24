@@ -1,0 +1,36 @@
+//val abc -> val is final in java, you can change it.. its a constant
+//var xyz -> var is variable, value can be changed
+
+/*val astr = "asdfsad" // Constant
+    astr = "adfasd"
+    var hhh = "asdsad"
+    hhh = "dasdsaf"*/
+
+data class User(val name:String, val id:Int)
+data class UserList(val userList:ArrayList<User>)
+
+fun main(args:Array<String>) {
+    
+    var user1= User("name2",2)
+    var user2= User("name2",3)
+    println(user1 == user2)
+    println(user1.copy(name="mansoor") == user2.copy(name="mansoor"))
+    
+    val users1= ArrayList<User>()
+    for(i in 1..3)
+    {
+        users1.add(User("name"+i,i))
+    }
+    val userList1=UserList(users1)
+    
+    val users2= ArrayList<User>()
+    for(i in 1..3)
+    {
+        users2.add(User("name"+i,i))
+    }
+    val userList2= UserList(users2)
+    print(userList1 == userList2)
+}
+//fun UserList(users:ArrayList<User){
+    
+//}

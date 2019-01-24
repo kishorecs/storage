@@ -1,0 +1,62 @@
+fun main() {
+    //LAMBDA
+    // Lambda
+	val upperCase = {input:String -> input.toUpperCase()}
+	val upperCase1:(String)->String = {input -> input.toUpperCase()}
+	val upperCase2:(String)->String = {it.toUpperCase()}
+
+    println("Uppercase to: " + upperCase("kotlin"))
+    println("Uppercase to: " + upperCase1("kotlin 1"))
+    println("Uppercase to: " + upperCase2("kotlin 2"))
+    
+
+    //let
+	//map
+	//filter
+	//listOf
+    val numbers = listOf(1, 2, 4, -7, 3, 9, -3, -6, 7)
+    println(numbers)
+    val pos = numbers.filter{x -> x > 0}
+    val neg = numbers.filter{it < 0}
+    
+    println("Pos: $pos")
+    println("Pos: $neg")
+    
+    val maps = numbers.map{x -> x * 2}
+    val value = numbers.getOrElse(1){42/*some const*/}
+    
+}
+
+
+==================
+fun main() {
+    val str = "Hello World"
+	val result = str.removeFirstLastChar()
+	println("==> $result")// another way of printing output
+    //println(result)
+    println(5.mult(10))
+    val b = 6.mult(12)
+    val c = 5 x 12
+    println(b)
+    println(c)
+    
+    println("Functional Programming")
+    var op = getOperation("Add")
+    println(op(5, 7))
+    println(getOperation("Mul")(5, 7))
+    println("----------Function as Parameter and Return Function from Function----------")
+    println(doOperation(3, 4, ::add))
+    println(doOperation(3, 5, {x, y -> x*y}))
+    println(doOperation(4, 5) {x, y -> x*y}) // if lambda is last arg to the function, then we can skip the bracket
+    
+    
+    //LAMBDA
+    // Lambda
+	val upperCase = {input:String -> input.toUpperCase()}
+	val upperCase1:(String)->String = {input -> input.toUpperCase()}
+	val upperCase2:(String)->String = {it.toUpperCase()}
+
+    println("Uppercase to: " + upperCase("kotlin"))
+    println("Uppercase to: " + upperCase1("kotlin 1"))
+    println("Uppercase to: " + upperCase2("kotlin 2"))
+}

@@ -1,0 +1,12 @@
+// Extension Function
+// visible in same package
+// import to use in other packages
+fun String.removeFirstLastChar():String = this.substring(1, this.length - 1) 
+ 
+fun main() {
+    val str = "Hello World"
+	val result = str.removeFirstLastChar()
+	println("==> $result")// another way of printing output
+    //println(result)
+    
+}

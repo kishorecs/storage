@@ -1,0 +1,48 @@
+/*var greeting:String = "Hello world!";
+var greetingCanBeNull:String? = "Hello world!";
+
+fun main() {
+    var myData:String = "Kotlin" // can never be null
+//     myData = null // Can not be assigned null
+    
+    var myData1:String? = "Kotlin" // can be null as ? is mentioned
+    myData1 = null // Can be assigned null
+}*/
+
+
+//Sealed class .. its like interface in Java
+sealed class ServerResult { 
+    class Success(val msg:String):ServerResult()
+    class Failure(val msg:String):ServerResult()
+}
+
+fun parsedDataFromNetwork(input:String):ServerResult {
+    if(input.equals("SRIB")) {
+        return ServerResult.Success("Data Received.")
+    } else {
+        return ServerResult.Failure("Data Receive Failed!")
+    }
+}
+
+
+
+fun main() {
+    val res = parsedDataFromNetwork("SRIB")
+    /*if(res is ServerResult.Success) {
+        println(res.msg)
+//     } else {
+//         println(res.msg) //msg can not be accessed here
+//     }
+    } else if(res is ServerResult.Failure) {
+        println(res.msg)
+    }*/
+    
+    when(res) {
+        is ServerResult.Success -> println(res.msg)
+        is ServerResult.Failure -> println(res.msg)
+        // here 'else' will be redundant as there is nothing left from ServerResult class to be shown, 
+        // both success and failure are already checked
+// 		else -> (res) 
+    }
+    
+}

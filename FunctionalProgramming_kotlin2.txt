@@ -1,0 +1,71 @@
+// Extension Function
+// visible in same package
+// import to use in other packages
+fun String.removeFirstLastChar():String = this.substring(1, this.length - 1) 
+ 
+fun main() {
+    val str = "Hello World"
+	val result = str.removeFirstLastChar()
+	println("==> $result")// another way of printing output
+    //println(result)
+    println(5.mult(10))
+    val b = 6.mult(12)
+    val c = 5 x 12
+    println(b)
+    println(c)
+    
+    println("Functional Programming")
+    var op = getOperation("Add")
+    println(op(5, 7))
+    println(getOperation("Mul")(5, 7))
+    println("----------Function as Parameter and Return Function from Function----------")
+    println(doOperation(3, 4, ::add))
+    println(doOperation(3, 5, {x, y -> x*y}))
+    println(doOperation(4, 5) {x, y -> x*y}) // if lambda is last arg to the function, then we can skip the bracket
+    
+    
+    //LAMBDA
+    // Lambda
+	val upperCase = {input:String -> input.toUpperCase()}
+	val upperCase1:(String)->String = {input -> input.toUpperCase()}
+	val upperCase2:(String)->String = {it.toUpperCase()}
+
+    println("Uppercase to: " + upperCase("kotlin"))
+    println("Uppercase to: " + upperCase1("kotlin 1"))
+    println("Uppercase to: " + upperCase2("kotlin 2"))
+}
+
+fun Int.mult(a:Int) = a * this
+
+infix fun Int.x(a:Int) = a * this
+
+
+//Functional Programming
+//
+fun getOperation(op:String):(Int, Int)-> Int {
+    if(op.equals("Add")) {
+        //return {x, y -> x+y}
+        return ::add
+    } else if(op.equals("Mul")) {
+    	return {x, y -> x*y} // lambda function
+        //return ::mul
+    }
+    return {x, y -> 0}
+}
+
+fun add(x:Int, y:Int):Int {
+    return x+y
+}
+
+fun mul(x:Int, y:Int):Int {
+    return x*y
+}
+
+fun doOperation(x:Int, y:Int, doFunc:(Int, Int) -> Int):Int {
+    return doFunc(x, y)
+}
+
+
+
+
+
