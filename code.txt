@@ -1,0 +1,35 @@
+import java.io.File;
+import java.util.HashMap;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+		HashMap<File, File[]> data = read("/home/test/kishore");
+		Set<File> dirs = data.keySet();
+		for (File d : dirs) {
+			System.out.print("DIR:"+d.getName());
+			System.out.print(", FILES:");
+			File[] files = data.get(d);
+			for (File f : files) {
+				System.out.print(f.getName() + ", ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static HashMap<File, File[]> read(String path) {
+		HashMap<File, File[]> data = new HashMap<File, File[]>();
+		File baseDir = new File(path);
+		if(baseDir.exists() && baseDir.isDirectory()) {
+			File[] dirs = baseDir.listFiles();
+			for (File d : dirs) {
+				if(d.isDirectory()) {
+					data.put(d, d.listFiles());
+				}
+			}
+		}
+		
+		return data;
+	}
+}
