@@ -1,0 +1,32 @@
+----------------------------------------
+ Create Executable binary from CMain
+----------------------------------------
+mkdir -p /home/jay/home_edge/edge-home-orchestration-go/CMain/bin/linux_x86-64
+make -C /home/jay/home_edge/edge-home-orchestration-go/CMain
+make[1]: Entering directory '/home/jay/home_edge/edge-home-orchestration-go/CMain'
+rm -f *.o 
+rm -f bin/linux_x86-64/edge-orchestration
+gcc -g -Wall -Werror -fPIE -pie src/main.c src/orchestration_server.c -o bin/linux_x86-64/edge-orchestration -I inc/linux_x86-64 `pkg-config --libs --cflags gio-2.0 gio-unix-2.0 glib-2.0` -Llib/linux_x86-64 -lorchestration -ldl
+Package gio-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gio-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gio-2.0' found
+Package gio-unix-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gio-unix-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gio-unix-2.0' found
+Package glib-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glib-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glib-2.0' found
+src/main.c:19:21: fatal error: gio/gio.h: No such file or directory
+compilation terminated.
+In file included from src/orchestration_server.c:21:0:
+inc/linux_x86-64/gdbus_interface.h:26:21: fatal error: gio/gio.h: No such file or directory
+compilation terminated.
+Makefile:37: recipe for target 'build' failed
+make[1]: *** [build] Error 1
+make[1]: Leaving directory '/home/jay/home_edge/edge-home-orchestration-go/CMain'
+Makefile:162: recipe for target 'build-dbus-server' failed
+make: *** [build-dbus-server] Error 2
+

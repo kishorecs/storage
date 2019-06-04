@@ -1,0 +1,44 @@
+Once Build is successful, Service will start. You can see something like this as below.
+
+----------------------------------------
+  Register Edge-Orchestration Service
+----------------------------------------
+● edge-orchestration.service - edge orchestration
+   Loaded: loaded (/etc/systemd/system/edge-orchestration.service; disabled; vendor preset: enabled)
+   Active: active (running) since Tue 2019-06-04 16:03:38 IST; 34ms ago
+ Main PID: 13367 (edge-orchestrat)
+   CGroup: /system.slice/edge-orchestration.service
+           └─13367 /usr/bin/edge-orchestration
+
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 orchestration.go:169: Orchestration Start Out
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 cipherSHA256.go:46: len : 0
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 cipherSHA256.go:47: can't read passphrase key from keyFilePath 
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 route.go:69: {APIV1ServicemgrServicesPost POST /api/v1/servicem
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 configuremgr.go:96: watcher.Events not ok !:  false
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 route.go:69: {APIV1ServicemgrServicesNotificationServiceIDPost 
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 route.go:69: {APIV1ScoringmgrScoreLibnameGet GET /api/v1/scorin
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 main.go:133: interface orchestration init done
+Jun 04 16:03:38 linux-2030029092 edge-orchestration[13367]: 2019/06/04 16:03:38 route.go:60: ListenAndServe
+Jun 04 16:03:38 linux-2030029092 systemd[1]: Started edge orchestration.
+
+
+Check status of Service
+==========================
+service edge-orchestration status
+
+Start Service
+=================
+service edge-orchestration start
+
+Stop Service
+=================
+service edge-orchestration stop
+
+Run Sample App to check
+=========================
+1. Go to below dir
+	~/home_edge/edge-home-orchestration-go/libedge-orchestration/sample/output
+2. Run ./orchestration_sample
+3. Make sure lib path is set (LD_LIBFRARY_PATH)
+   Lib is available in below path
+	~/home_edge/edge-home-orchestration-go/libedge-orchestration/liborchestration-client.so
