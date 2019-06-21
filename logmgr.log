@@ -1,0 +1,178 @@
+2019/06/12 16:55:59 main.go:95: [interface] OrchestrationInit
+2019/06/12 16:55:59 main.go:96: >>> commitID  :  63d5718
+2019/06/12 16:55:59 main.go:97: >>> version   :  0.0.1
+2019/06/12 16:55:59 main.go:98: >>> buildTime :  20190604.1602
+2019/06/12 16:55:59 orchestration.go:162: Orchestration Start In
+2019/06/12 16:55:59 networkhelper.go:151: >>  192.168.43.147
+2019/06/12 16:55:59 networkhelper.go:151: >>  2401:4900:331e:6940:45be:46eb:b3e4:5ebf
+2019/06/12 16:55:59 networkhelper.go:151: >>  2401:4900:331e:6940:dafc:62b:ee14:e711
+2019/06/12 16:55:59 networkhelper.go:151: >>  fe80::8e0b:2d8:a4b:9aba
+2019/06/12 16:55:59 discovery.go:317: [discoverymgr] Platform:: tizen  OnboardType:: rpm
+2019/06/12 16:55:59 discovery.go:312: [discoverymgr] UUID :  557f21f2-01fe-4410-bb09-38de28303e55
+2019/06/12 16:55:59 discovery.go:369: [discoverymgr] ip : 192.168.43.147
+2019/06/12 16:55:59 configuremgr.go:197: [configuremgr] libPath  : /etc/edge-orchestration/apps/myscoring/libmyscoring.so
+2019/06/12 16:55:59 configuremgr.go:198: [configuremgr] confPath : /etc/edge-orchestration/apps/myscoring/myscoring.conf
+2019/06/12 16:55:59 configuremgr.go:152: dl: 0x7f83ec000ad0
+2019/06/12 16:55:59 discovery.go:454: [discoverymgr] [mdnsTXTSizeChecker] size ::  21  Bytes
+2019/06/12 16:55:59 configuremgr.go:197: [configuremgr] libPath  : /etc/edge-orchestration/apps/myscoring2/libmyscoring2.so
+2019/06/12 16:55:59 configuremgr.go:198: [configuremgr] confPath : /etc/edge-orchestration/apps/myscoring2/myscoring2.conf
+2019/06/12 16:55:59 configuremgr.go:152: dl: 0x7f83ec0017a0
+2019/06/12 16:55:59 discovery.go:454: [discoverymgr] [mdnsTXTSizeChecker] size ::  43  Bytes
+2019/06/12 16:55:59 configuremgr.go:128: configuremgr watch end
+2019/06/12 16:55:59 orchestration.go:169: Orchestration Start Out
+2019/06/12 16:55:59 route.go:69: {APIV1ServicemgrServicesPost POST /api/v1/servicemgr/services 0x56375455a5a0}
+2019/06/12 16:55:59 configuremgr.go:96: watcher.Events not ok !:  false
+2019/06/12 16:55:59 route.go:69: {APIV1ServicemgrServicesNotificationServiceIDPost POST /api/v1/servicemgr/services/notification/{serviceid} 0x56375455a600}
+2019/06/12 16:55:59 route.go:69: {APIV1ScoringmgrScoreLibnameGet GET /api/v1/scoringmgr/score 0x56375455a660}
+2019/06/12 16:55:59 main.go:133: interface orchestration init done
+2019/06/12 16:55:59 route.go:60: ListenAndServe
+2019/06/12 16:56:24 main.go:169: [src/main.c:30] app_name : list_segments
+2019/06/12 16:56:24 main.go:169: [src/main.c:31] service_info : ls -al
+2019/06/12 16:56:24 main.go:140: [interface] OrchestrationRequestService
+2019/06/12 16:56:24 main.go:150: appName: list_segments args: [ls -al]
+2019/06/12 16:56:24 orchestration_api.go:69: [RequestService] list_segments: [ls -al]
+2019/06/12 16:56:24 scoringmgr.go:131: [IN] getScoreLocalEnv
+2019/06/12 16:56:24 scoringmgr.go:139: scoringmgr scoreValue :  6.413117192028709
+2019/06/12 16:56:24 restclient.go:143: [JSON] :  map[ScoreValue:6.275473054234064]
+2019/06/12 16:56:24 orchestration_api.go:89: [orchestrationapi]  [{192.168.43.147 6.413117192028709} {192.168.43.51 6.275473054234064}]
+2019/06/12 16:56:24 main.go:156: requestService handle : 0
+2019/06/12 16:56:24 tizenexecutor.go:56: [tizenexecutor] list_segments [ls -al]
+2019/06/12 16:56:24 tizenexecutor.go:57: [tizenexecutor] parameter length : 2
+2019/06/12 16:56:24 tizenexecutor.go:119: total 12056
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 .
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 ..
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 22 16:23 bin
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   4 root root     4096 Apr 22 16:31 boot
+2019/06/12 16:56:24 tizenexecutor.go:119: drwx------   2 root root     4096 Apr 16 14:06 .cache
+2019/06/12 16:56:24 tizenexecutor.go:119: -rw-------   1 root root 50081792 Apr 22 16:30 core
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  20 root root     4400 Jun 10 12:27 dev
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x 147 root root    12288 Jun  4 16:03 etc
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   6 root root     4096 Apr 22 16:29 home
+2019/06/12 16:56:24 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 16:56:24 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img.old -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 lib
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 May  2 18:23 lib32
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:58 lib64
+2019/06/12 16:56:24 tizenexecutor.go:119: drwx------   2 root root    16384 Apr 16 12:40 lost+found
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 media
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 21:26 mnt
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 opt
+2019/06/12 16:56:24 tizenexecutor.go:119: dr-xr-xr-x 274 root root        0 Jun 10 12:27 proc
+2019/06/12 16:56:24 tizenexecutor.go:119: drwx------   4 root root     4096 Apr 16 15:10 root
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  32 root root     1060 Jun 12 16:25 run
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root    12288 Apr 16 21:32 sbin
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 15:10 snap
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 srv
+2019/06/12 16:56:24 tizenexecutor.go:119: dr-xr-xr-x  13 root root        0 Jun 12 16:28 sys
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxrwxrwt  16 root root     4096 Jun 12 16:55 tmp
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  12 root root     4096 May  2 18:23 usr
+2019/06/12 16:56:24 tizenexecutor.go:119: drwxr-xr-x  14 root root     4096 Apr 16 14:04 var
+2019/06/12 16:56:24 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 16:56:24 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz.old -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 16:56:24 tizenexecutor.go:64: [tizenexecutor] Just ran subprocess  19719
+2019/06/12 16:56:24 tizenexecutor.go:140: [tizenexecutor] list_segments is exited with no error
+2019/06/12 16:56:24 orchestration_api.go:167: [orchestrationapi] service status changed [appNames:list_segments][status:Finished]
+2019/06/12 16:59:05 internalhandler.go:169: [RestInternalInterface] APIV1ScoringmgrScoreLibnameGet
+2019/06/12 16:59:05 internalhandler.go:189: list_segments
+2019/06/12 16:59:05 scoringmgr.go:131: [IN] getScoreLocalEnv
+2019/06/12 16:59:05 scoringmgr.go:139: scoringmgr scoreValue :  6.413117192028709
+2019/06/12 16:59:05 logger.go:33: GET /api/v1/scoringmgr/score APIV1ScoringmgrScoreLibnameGet 871.056µs
+2019/06/12 16:59:05 internalhandler.go:94: [RestInternalInterface] APIV1ServicemgrServicesPost
+2019/06/12 16:59:05 internalhandler.go:116: map[NotificationTargetURL:192.168.43.51 ServiceID:1 ServiceName:list_segments UserArgs:[ls -al]]
+2019/06/12 16:59:05 logger.go:33: POST /api/v1/servicemgr/services APIV1ServicemgrServicesPost 647.925µs
+2019/06/12 16:59:05 tizenexecutor.go:56: [tizenexecutor] list_segments [ls -al]
+2019/06/12 16:59:05 tizenexecutor.go:57: [tizenexecutor] parameter length : 2
+2019/06/12 16:59:05 tizenexecutor.go:119: total 12056
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 .
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 ..
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 22 16:23 bin
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   4 root root     4096 Apr 22 16:31 boot
+2019/06/12 16:59:05 tizenexecutor.go:119: drwx------   2 root root     4096 Apr 16 14:06 .cache
+2019/06/12 16:59:05 tizenexecutor.go:119: -rw-------   1 root root 50081792 Apr 22 16:30 core
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  20 root root     4400 Jun 10 12:27 dev
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x 147 root root    12288 Jun  4 16:03 etc
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   6 root root     4096 Apr 22 16:29 home
+2019/06/12 16:59:05 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 16:59:05 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img.old -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 lib
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 May  2 18:23 lib32
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:58 lib64
+2019/06/12 16:59:05 tizenexecutor.go:119: drwx------   2 root root    16384 Apr 16 12:40 lost+found
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 media
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 21:26 mnt
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 opt
+2019/06/12 16:59:05 tizenexecutor.go:119: dr-xr-xr-x 274 root root        0 Jun 10 12:27 proc
+2019/06/12 16:59:05 tizenexecutor.go:119: drwx------   4 root root     4096 Apr 16 15:10 root
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  32 root root     1060 Jun 12 16:25 run
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root    12288 Apr 16 21:32 sbin
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 15:10 snap
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 srv
+2019/06/12 16:59:05 tizenexecutor.go:119: dr-xr-xr-x  13 root root        0 Jun 12 16:28 sys
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxrwxrwt  16 root root     4096 Jun 12 16:55 tmp
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  12 root root     4096 May  2 18:23 usr
+2019/06/12 16:59:05 tizenexecutor.go:119: drwxr-xr-x  14 root root     4096 Apr 16 14:04 var
+2019/06/12 16:59:05 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 16:59:05 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz.old -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 16:59:05 tizenexecutor.go:64: [tizenexecutor] Just ran subprocess  19756
+2019/06/12 16:59:05 tizenexecutor.go:140: [tizenexecutor] list_segments is exited with no error
+2019/06/12 17:01:34 internalhandler.go:169: [RestInternalInterface] APIV1ScoringmgrScoreLibnameGet
+2019/06/12 17:01:34 internalhandler.go:189: list_segments
+2019/06/12 17:01:34 scoringmgr.go:131: [IN] getScoreLocalEnv
+2019/06/12 17:01:34 scoringmgr.go:139: scoringmgr scoreValue :  6.413117192028709
+2019/06/12 17:01:34 logger.go:33: GET /api/v1/scoringmgr/score APIV1ScoringmgrScoreLibnameGet 619.683µs
+2019/06/12 17:01:34 internalhandler.go:94: [RestInternalInterface] APIV1ServicemgrServicesPost
+2019/06/12 17:01:34 internalhandler.go:116: map[NotificationTargetURL:192.168.43.51 ServiceID:2 ServiceName:list_segments UserArgs:[ls -al]]
+2019/06/12 17:01:34 logger.go:33: POST /api/v1/servicemgr/services APIV1ServicemgrServicesPost 279.988µs
+2019/06/12 17:01:34 tizenexecutor.go:56: [tizenexecutor] list_segments [ls -al]
+2019/06/12 17:01:34 tizenexecutor.go:57: [tizenexecutor] parameter length : 2
+2019/06/12 17:01:34 tizenexecutor.go:119: total 12056
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 Jun 12 17:01 .
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 Jun 12 17:01 ..
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 22 16:23 bin
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   4 root root     4096 Apr 22 16:31 boot
+2019/06/12 17:01:34 tizenexecutor.go:119: drwx------   2 root root     4096 Apr 16 14:06 .cache
+2019/06/12 17:01:34 tizenexecutor.go:119: -rw-------   1 root root 50081792 Apr 22 16:30 core
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  20 root root     4400 Jun 10 12:27 dev
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x 147 root root    12288 Jun  4 16:03 etc
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   6 root root     4096 Apr 22 16:29 home
+2019/06/12 17:01:34 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 17:01:34 tizenexecutor.go:119: lrwxrwxrwx   1 root root       33 Apr 16 12:55 initrd.img.old -> boot/initrd.img-4.4.0-145-generic
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  25 root root     4096 May  2 18:23 lib
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 May  2 18:23 lib32
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:58 lib64
+2019/06/12 17:01:34 tizenexecutor.go:119: drwx------   2 root root    16384 Apr 16 12:40 lost+found
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 media
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 21:26 mnt
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 opt
+2019/06/12 17:01:34 tizenexecutor.go:119: dr-xr-xr-x 274 root root        0 Jun 10 12:27 proc
+2019/06/12 17:01:34 tizenexecutor.go:119: drwx------   4 root root     4096 Apr 16 15:10 root
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  32 root root     1060 Jun 12 16:25 run
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root    12288 Apr 16 21:32 sbin
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 15:10 snap
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x   2 root root     4096 Apr 16 12:40 srv
+2019/06/12 17:01:34 tizenexecutor.go:119: dr-xr-xr-x  13 root root        0 Jun 12 16:28 sys
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxrwxrwt  16 root root     4096 Jun 12 17:00 tmp
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  12 root root     4096 May  2 18:23 usr
+2019/06/12 17:01:34 tizenexecutor.go:119: drwxr-xr-x  14 root root     4096 Apr 16 14:04 var
+2019/06/12 17:01:34 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 17:01:34 tizenexecutor.go:119: lrwxrwxrwx   1 root root       30 Apr 16 12:55 vmlinuz.old -> boot/vmlinuz-4.4.0-145-generic
+2019/06/12 17:01:34 tizenexecutor.go:119: -rw-r--r--   1 root root        0 Jun 12 17:01 xyz
+2019/06/12 17:01:34 tizenexecutor.go:64: [tizenexecutor] Just ran subprocess  19797
+2019/06/12 17:01:34 tizenexecutor.go:140: [tizenexecutor] list_segments is exited with no error
+2019/06/12 17:20:29 detector_netlink.go:76: detector_netlink [DetectionHandler] New Connection :  192.168.43.147
+2019/06/12 17:20:29 networkhelper.go:151: >>  192.168.43.147
+2019/06/12 17:20:29 networkhelper.go:156:  192.168.43.147
+2019/06/12 17:20:29 networkhelper.go:151: >>  2401:4900:331e:6940:45be:46eb:b3e4:5ebf
+2019/06/12 17:20:29 networkhelper.go:151: >>  2401:4900:331e:6940:dafc:62b:ee14:e711
+2019/06/12 17:20:29 networkhelper.go:151: >>  fe80::8e0b:2d8:a4b:9aba
+2019/06/12 17:20:29 networkhelper.go:136: fail to get wifi IP:  -3
+2019/06/12 17:22:26 detector_netlink.go:80: detector_netlink [DetectionHandler] Disconnected :  192.168.43.147
+2019/06/12 17:22:29 detector_netlink.go:76: detector_netlink [DetectionHandler] New Connection :  182.16.2.33
+2019/06/12 17:22:29 networkhelper.go:151: >>  182.16.2.33
+2019/06/12 17:22:29 networkhelper.go:151: >>  fe80::df57:62e5:7530:abe8
+2019/06/12 17:22:29 discovery.go:535: [discoverymgr] [clearMap]
+2019/06/12 17:52:17 detector_netlink.go:76: detector_netlink [DetectionHandler] New Connection :  182.16.2.33
+2019/06/12 17:52:17 networkhelper.go:151: >>  182.16.2.33
+2019/06/12 17:52:17 networkhelper.go:156:  182.16.2.33
+2019/06/12 17:52:17 networkhelper.go:151: >>  fe80::df57:62e5:7530:abe8
+2019/06/12 17:52:17 networkhelper.go:136: fail to get wifi IP:  -3
